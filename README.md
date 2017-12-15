@@ -10,7 +10,7 @@ Each day is present in a separate directory with it's own files.
 
 ### Go to the directory of the file.
 ```Powershell
-cd C:\Projects\GitHub\mvesign-adventofcode-2017\day-1
+cd C:\Projects\GitHub\mvesign-adventofcode-2017\day-1-1
 ```
 
 ### Build all C# files into a solution.
