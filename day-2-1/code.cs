@@ -14,7 +14,7 @@ namespace MVESIGN.AdventOfCode
 
             foreach(var line in lines)
             {
-                var numbers = line.Split('\t').Select(n => int.Parse(n)).ToList();
+                var numbers = line.Split('\t').Select(n => int.Parse(n));
                 checksum += numbers.Max() - numbers.Min();
             }
 
