@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Linq;
 
 namespace MVESIGN.AdventOfCode
@@ -10,23 +9,14 @@ namespace MVESIGN.AdventOfCode
 		{
             var input = 347991;
             
-            var distance = Program.GetDistance(
-                Program.GetPosition(input)
-            );
-
-            Console.WriteLine($"Distance: {distance}");
+            var position = Program.GetPosition(input);
+            
+            Console.WriteLine($"Distance: {(Math.Abs(0 - position.Item2) + Math.Abs(0 - position.Item3))}");
 		}
 
         private static int direction = 0;
         private static int distance = 1;
         private static (int, int, int) position = (1, 0, 0);
-
-        public static int GetDistance((int, int, int) point)
-        {
-            var deltaY = 0 - point.Item2;
-            var deltaX = 0 - point.Item3;
-            return (deltaY < 0 ? deltaY * -1 : deltaY) + (deltaX < 0 ? deltaX * -1 : deltaX);
-        }
 
         public static (int, int, int) GetPosition(int input)
         {
